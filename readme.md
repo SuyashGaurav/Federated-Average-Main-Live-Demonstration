@@ -16,11 +16,13 @@
 
 
 ## Performance Evaluation of FedAvg within the Context of DPP-Cache:
-We present the performance results of FedAvg integrated with DPP-Cache. Figs. show the
+- We present the performance results of FedAvg integrated with DPP-Cache. Figs. show the
 plots of cache hit and download rate as a function of time slot for two distinct base stations,
-namely Base Station 1 and Base Station 2 when using both DPP-Cache and FedAvg within the framework of DPP-Cache. Our analysis shows improvement in cache hit rates for both base stations on performing FedAvg in conjunction with DPP-Cache as compared to using
-DPP-Cache in isolation. Furthermore, it is important to note that the fetching cost associated
-with FedAvg remains approximately equal to that of DPP-Cache for both base stations. This result shows how using FedAvg improves cache performance without adding extra costs.
+namely Base Station 1 and Base Station 2 when using both DPP-Cache and FedAvg within the framework of DPP-Cache. 
+- Our analysis shows improvement in cache hit rates for both base stations on performing FedAvg in conjunction with DPP-Cache as compared to using
+DPP-Cache in isolation.
+- Furthermore, it is important to note that the fetching cost associated with FedAvg remains approximately equal to that of DPP-Cache for both base stations. This result shows how using FedAvg improves cache performance without adding extra costs.
+
 ### Base Station 1- Cache Hit Rate & Download Rate
 ![cache_hit1_page-0001](https://github.com/SuyashGaurav/Federated-Average-Main-Live-Demonstration/assets/102952185/2834802b-2971-4867-b3fc-dbff05c441cc)
 ![cache_replace_rate1_page-0001](https://github.com/SuyashGaurav/Federated-Average-Main-Live-Demonstration/assets/102952185/521aef29-e524-4bbb-9a7b-56ce5e1ee8a6)
