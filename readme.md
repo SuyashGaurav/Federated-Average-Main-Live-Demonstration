@@ -6,8 +6,7 @@
 - We implemented Federated Averaging (FedAvg) with the Drift Plus Penalty (DPP) cache algorithm within a Flask-based federated learning system. The architecture comprises one central server, a distributed network with two base stations, and multiple users.
 - Dataset for fedAvg Description: For fedAvg, we employ the same dataset that was utilized in DPP-cache, [“311 Service Requests Pitt” from Kaggle](https://www.kaggle.com/datasets/yoghurtpatil/311-service-requests-pitt). We evenly distribute this dataset to both base stations for FedAvg.
 
- ### 
-<img src="https://i.pinimg.com/originals/3a/36/20/3a36206f35352b4230d5fc9f17fcea92.png" width="20">  Youtube Video Link: https://www.youtube.com/watch?v=uIn7cSWpbto
+ ### <img src="https://i.pinimg.com/originals/3a/36/20/3a36206f35352b4230d5fc9f17fcea92.png" width="20">  Youtube Video Link: https://www.youtube.com/watch?v=uIn7cSWpbto
 
 ## Pictorial representation
 ![Multiple Server (1)](https://github.com/SuyashGaurav/Federated-Average-Main-Live-Demonstration/assets/102952185/238375b3-6f41-4b35-a843-e66a64f960e5)
