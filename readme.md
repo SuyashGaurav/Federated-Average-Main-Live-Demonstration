@@ -8,7 +8,7 @@
 
 - This project is a part of our work on the Drift Plus Penalty Caching Algorithm. For more details refer to this [GitHub Repo](https://github.com/SuyashGaurav/DPP-Cache-Main-Flask-Implementation).
 
- ### <img src="https://i.pinimg.com/originals/3a/36/20/3a36206f35352b4230d5fc9f17fcea92.png" width="20">  Youtube Video Link: https://www.youtube.com/watch?v=uIn7cSWpbto
+ ### <img src="https://i.pinimg.com/originals/3a/36/20/3a36206f35352b4230d5fc9f17fcea92.png" width="20" border-radius="10">  Youtube Video Link: https://www.youtube.com/watch?v=uIn7cSWpbto
 
 ## Pictorial representation
 ![Multiple Server (1)](https://github.com/SuyashGaurav/Federated-Average-Main-Live-Demonstration/assets/102952185/238375b3-6f41-4b35-a843-e66a64f960e5)
