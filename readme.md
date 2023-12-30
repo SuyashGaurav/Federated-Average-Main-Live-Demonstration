@@ -33,3 +33,8 @@ DPP-Cache in isolation.
 
 ## Extension
 The Exponential Weighted Average (EWA) algorithm assigns different weights to base stations based on the inverse of their MSE. The idea is to give more importance to base stations with lower MSE, indicating better model performance. The weight assigned to each base station is calculated exponentially, contributing to high-performing base stations more significantly.
+
+## Contributors
+- [Prof. Bharath B.N.](https://bharathbettagere.github.io/mywebpage/)
+- [Himanshu Kumar](https://github.com/himansh9u/)
+- [Suyash Gaurav](https://github.com/SuyashGaurav/)
