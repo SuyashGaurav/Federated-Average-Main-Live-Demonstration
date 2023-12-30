@@ -10,6 +10,8 @@
 
 ## Pictorial representation
 ![Multiple Server (1)](https://github.com/SuyashGaurav/Federated-Average-Main-Live-Demonstration/assets/102952185/238375b3-6f41-4b35-a843-e66a64f960e5)
+![WhatsApp Image 2023-12-24 at 11 36 29 PM](https://github.com/SuyashGaurav/Federated-Average-Main-Live-Demonstration/assets/102952185/6a49ed63-6dcd-4887-9d2c-64e2790e8071)
+
 
 ## Performance Evaluation of FedAvg within the Context of DPP-Cache:
 We present the performance results of FedAvg integrated with DPP-Cache. Figs. show the
