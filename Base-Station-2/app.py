@@ -58,6 +58,7 @@ def serve_image(filename):
     # Use send_file to serve the image
     return send_file(image_dir + filename, mimetype='image/jpg')
 
+
 @app.route('/delete/<int:id>')
 def delete(id):
     task_to_delete = Todo.query.get_or_404(id)
@@ -84,9 +85,9 @@ def download(content):
 
 if __name__ == "__main__":
     with app.app_context():
-        db.drop_all()
+        # db.drop_all()
         db.create_all()
     f = open('DPP/Datasets/dataset.txt', 'w')
     f.write("0 0 0\n")
     f.close()
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5002, debug=True)

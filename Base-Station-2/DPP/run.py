@@ -15,13 +15,11 @@ import matplotlib.pyplot as plt
 from optimizers.network import *
 from optimizers.constrained import constrained_solve
 import requests
-import tensorflow as tf
-import warnings
-warnings.simplefilter('ignore')
-
 import sys
 import hashlib
+import warnings
 
+warnings.simplefilter('ignore')
 BUF_SIZE = 65536
 
 sha256 = hashlib.sha256()
@@ -126,9 +124,7 @@ for i in range(threshold):
         # Copy the file to the destination directory
         shutil.copy(source_path, destination_path)
         os.remove(f'../TempFilesDpp/{i}.txt')
-mse = 0
-w = 1.0
-neita = 1e-2
+
 i=0
 with tqdm(total=NumSeq) as pbar:
     while i<NumSeq:
@@ -171,16 +167,11 @@ with tqdm(total=NumSeq) as pbar:
                 actual_cache_hit = np.dot(next_dem, X_t)
                 cache_hit.append(actual_cache_hit)
                 
-                #
-                mseError = np.linalg.norm(next_dem-pred,ord=2)
-                mse = mse + math.sqrt(mseError)
-                w = w*math.exp(-mse*neita/i)
-                
                 indices = np.argsort(next_dem)[::-1][:cache_constraint]
                 final = np.zeros((threshold,))
                 final[indices] = 1
                 
-                #
+                
                 best = np.dot(next_dem, final)
                 best_maximum.append(best)
                         
@@ -252,22 +243,13 @@ with tqdm(total=NumSeq) as pbar:
             plt.savefig(our_path+"Download_Rate.jpg")
             plt.clf()
 
-            # max_retries = 20
-            # retry_delay = 0.2
             for j in range(threshold):#
                 if X_t[j]==1 and X_t_1[j]==0:
                     url = f"http://10.196.11.11:5001/download/{j}"
-                    # for retry in range(max_retries):
-                        # try:
                     r = requests.get(url, data={'content': f"{j}"}, timeout=60)
                     f = open(f'../TempFilesDpp/{j}.txt', 'wb')
                     f.write(r.content)
                     f.close()
-                        #     break
-                        # except PermissionError:
-                        #     time.sleep(retry_delay)
-                        # else:
-                        #     print(f"Unable to access the file after {max_retries} retries.")
                     source_path = f'../TempFilesDpp/{j}.txt'
                     destination_path = f'../cached_file/{j}.txt'
                     shutil.copy(source_path, destination_path)
@@ -276,18 +258,16 @@ with tqdm(total=NumSeq) as pbar:
                 if X_t[j]==0 and X_t_1[j]==1:
                     destination_path = f'../cached_file/{j}.txt'
                     os.remove(destination_path)
-                    
             X_t_1 = X_t
             
             prev_demands.append(next_dem)
 
             if i >= past+future:
                 model_path = 'models/init.h5'
-                url = "http://10.196.11.11:5001/upload_model/1"
-                weight_data = {'integer': w}
+                url = "http://10.196.11.11:5001/upload_model/2"
                 with open(model_path, 'rb') as file:
                     files = {'file': (model_path, file)}
-                    response = requests.post(url, files=files, data=weight_data, timeout=60)
+                    response = requests.post(url, files=files, timeout=60)
 
             if i>=past+future:
                 url1 = "http://10.196.11.11:5001/get_global/"
@@ -298,16 +278,15 @@ with tqdm(total=NumSeq) as pbar:
                 downloaded_global_model = tf.keras.models.load_model('models/global_model.h5')
                 global_model.set_weights(downloaded_global_model.get_weights())
 
-            # if i>=past+future:
-            #     url2 = "http://10.196.11.11:5001/upload_w/1"
-            #     data = {'integer': w}
-            #     response = requests.post(url2, json=data, timeout=60)
-
             pbar.update(1)
             i = i+1
         else:
-            time.sleep(2)
+            # print(len(data)+10)
+            # print(int((i+1)*DataLength/NumSeq))
+            sec = 2
+            time.sleep(sec)
         
+
 
         pd.DataFrame(hit_rate).to_csv(our_path+'hit_rate.csv',index=False)
         pd.DataFrame(download_rate).to_csv(our_path+'download_rate.csv',index=False)
