@@ -35,5 +35,5 @@ The Exponential Weighted Average (EWA) algorithm assigns different weights to ba
 
 ## Contributors
 - [Prof. Bharath B.N.](https://bharathbettagere.github.io/mywebpage/)
-- [Himanshu Kumar](https://github.com/himansh9u/)
 - [Suyash Gaurav](https://github.com/SuyashGaurav/)
+- [Himanshu Kumar](https://github.com/himansh9u/)
