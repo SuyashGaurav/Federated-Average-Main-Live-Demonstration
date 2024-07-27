@@ -19,7 +19,7 @@
 - We present the performance results of FedAvg integrated with DPP-Cache. Figs. show the
 plots of cache hit and download rate as a function of time slot for two distinct base stations,
 namely Base Station 1 and Base Station 2 when using both DPP-Cache and FedAvg within the framework of DPP-Cache. 
-- Our analysis shows that combining FedAvg with DPP-Cache improves cache hit rates for both base stations by 5% compared to using DPP-Cache alone.
+- Our analysis shows that combining FedAvg with DPP-Cache improves cache hit rates for both base stations by 2.5% compared to using DPP-Cache alone.
 - Furthermore, it is important to note that the fetching cost associated with FedAvg remains approximately equal to that of DPP-Cache for both base stations. This result shows how using FedAvg improves cache performance without adding extra costs.
 
 ### Base Station 1- Cache Hit Rate & Download Rate
